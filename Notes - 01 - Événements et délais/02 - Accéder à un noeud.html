@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Noeud HTML</title>
+		<meta charset="utf-8"/>
+		<script>
+			window.addEventListener("load", () => {
+				let textNode = document.querySelector("#texte");
+				let textNodeV2 = document.querySelector("div");
+				let textNodeV3 = document.querySelector("body > *");
+				let textNodeV4 = document.querySelector(".tmp");
+
+				textNode.classList.add("tmp2");
+				textNode.style.backgroundColor = "#236523";
+
+				let nodes = document.querySelectorAll(".tmp");
+				nodes.forEach(node => {
+					node.style.color = "blue";
+					node.addEventListener("click", () => {
+						node.style.display = "none";
+					})
+				})
+			})
+
+			const sourisClique = (e, node) => {
+				console.log(e.x, node);
+			}
+		</script>
+	</head>
+	<body>
+		<div class="tmp" id="texte" onclick="sourisClique(event, this)">Lorem ipsum</div>
+		<div class="tmp" onclick="sourisClique(event, this)">Lorem ipsum</div>
+		<div class="tmp">Lorem ipsum</div>
+		<div class="tmp">Lorem ipsum</div>
+		<div class="tmp">Lorem ipsum</div>
+		<div class="tmp">Lorem ipsum</div>
+		<div class="tmp">Lorem ipsum</div>
+	</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Your Dream Trip</title>
+        <meta charset="utf-8" />
+		<link href="css/global.css" rel="stylesheet" />
+		<script src="js/jquery-1.9.1.min.js"></script>
+		<script src="js/javascript.js"></script>
+	</head>
+	<body>
+		<div id="you-circle"></div>
+		<div id="you-arrow"></div>
+		<div id="you-text">Serez-vous le prochain ?</div>
+		
+		<div class="form-section">
+			<h1>Grand concours CVM : Voyagez dans l'espace</h1>
+			<p>Sky is the limit... hé bien plus maintenant. Participez au concours et courez la chance de gagner un voyage pour 2 à bord de la navette spatiale CVM. </p>
+			<p>Remplissez le formulaire suivant et croisez-vos doigts !</p>
+			
+			<!-- action = destination pour traiter le formulaire (URL, page web) -->
+			<!-- method = get ou post -->
+			<form action="" method="post">
+				<div class="question">
+					<h2>Quel est votre nom ?</h2>
+					<div>
+						<!-- variable "nom" avec la valeur "Philippe" -->
+						<input type="text" name="nom" required placeholder="5 lettres min." value="Philippe" >
+					</div>
+				</div>
+				
+				<div class="question">
+					<h2>Pourquoi voulez-vous aller dans l'espace ?</h2>
+					<div>
+						<textarea name="raison" rows="5" cols="30" style="width:100%;height:80px">J'aime le silence</textarea>
+					</div>
+				</div>
+				
+				<div class="question">
+					<h2>Quel est le mot de passe de votre compte banquaire ?</h2>
+					<div>
+						<input type="password" name="mot-de-passe">
+					</div>
+				</div>
+
+				<div class="question">
+					<h2>Quel est votre courriel ?</h2>
+					<div>
+						<input type="email" name="courriel">
+					</div>
+				</div>
+
+				<div class="question">
+					<h2>Quel est votre date de naissance ?</h2>
+					<div>
+						<input type="date" name="date-naissance">
+					</div>
+				</div>
+				
+				<div class="question">
+					<h2>Aucune question ici...</h2>
+					<div>
+						<input type="hidden" name="langue" value="fr">
+					</div>
+				</div>
+				
+				<div class="question">
+					<h2>Quelle est votre planète préférée ?</h2>
+					<div>
+						<select name="planete" required>
+							<option value="">- Choisir -</option>
+							<option value="1">Mercure</option>
+							<option>Venus</option>
+							<option>Terre</option>
+							<option selected>Mars</option>
+						</select>
+					</div>
+				</div>
+				
+				<div class="question">
+					<h2>Que buvez-vous le matin?</h2>
+					<div>
+						<div><label><input type="radio" name="boisson" value="café"> Café </label></div>
+						<div><label><input type="radio" name="boisson" value="thé" checked> Thé </label></div>
+						<div><label><input type="radio" name="boisson" value="jus-orange"> Jus d'orange </label></div>
+					</div>
+				</div>
+				
+				<div class="question">
+					<h2>Quels sont vos intérêts ?</h2>
+					<div>
+						<div><label><input type="checkbox" name="interets" value="Cinéma"> Cinéma </label></div>
+						<div><label><input type="checkbox" name="interets" value="Sport"> Sport </label></div>
+						<div><label><input type="checkbox" name="interets" value="Gaming" checked> Gaming </label></div>
+					</div>
+				</div>
+				
+				<div class="question">
+					<h2>Pour terminer, appuyez sur le bon bouton</h2>
+					<div>
+						<button type="button" onclick="alert(123)">Envoyer</button>
+						<input type="image" src="images/arrow.png" alt="">
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+</html>

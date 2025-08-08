@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Les variables</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<script>
+			let age = Math.floor(Math.random() * 101); // entre 0 et 100
+			age = 20 + Math.floor(Math.random() * 81); // entre 20 et 100
+			console.log(age);
+			// sfsdf
+			/* sadf */
+			// if (1 == 1) {
+				// var = variable de fonction ou globale
+				var username = "sadf";
+				username = true;
+				username = 1.3;
+			// }
+			// alert(username);
+			console.log(username);
+
+			// if (1 == 1) {
+				// let = scope-aware, ram libérée après le bloc de code où la variable se trouve
+				let nom = "Philippe";
+			// }
+			// alert(nom);
+
+			nom = nom + " Tremblay";
+			console.log(nom);
+			nom = null;
+
+			// Opération terniaire
+			let estVide = nom?.length == 0 ? true : false;
+			// estVide = nom.length == 0;
+
+			const tmp = nom ?? "défaut";
+		</script>
+	</body>
+</html>

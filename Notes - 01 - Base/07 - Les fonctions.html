@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Les fonctions</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<script>
+			function afficher(texte, texte2 = "fff") {
+				console.log("J'affiche : " + texte + texte2);
+			}	
+
+			afficher(123);
+			afficher("123", "asdf");
+
+			// Arrow function (=>)
+			const afficher2 = (texte, texte2 = "asdf") => {
+				console.log("J'affiche : " + texte + texte2);	
+			}
+			afficher2("Philippe", "Tremblay");
+
+			// Si 1 seul param, alors les () sont optionnelles
+			const afficher3 = txt => {
+				console.log(txt);
+
+				return "ok";
+			}
+
+			let result = afficher3("123sadf");
+			console.log(result);
+
+			const mul = (nb1, nb2) => nb1 * nb2;
+			let res = mul(3, 5);
+			console.log(res);
+		</script>
+	</body>
+</html>

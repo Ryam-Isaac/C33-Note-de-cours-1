@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Validation de formulaire</title>
+		<meta charset="utf-8"/>
+	</head>
+	<body>
+		<script>
+			
+			const valider = () => {
+				let cityNode = document.getElementById("city");
+				let cityValue = cityNode.value; // string
+				let errorList = [];
+
+				// si la longueur est < 3, alors mettre success à false
+				if (cityValue.length < 3) {
+					errorList.push("La ville doit contenir au moins 3 lettres");
+				}
+
+				if (!cityValue.match(/^[a-z\sA-Z]*$/)) {
+					errorList.push("La ville ne peut contenir que des lettres");
+				}
+
+				if (errorList.length > 0) {
+					let message = "Voici vos erreurs :\n";
+
+					// Avec un forEach, ajoutez les erreurs dans "message"
+					errorList.forEach(error => {
+						message += "- " + error + "\n";
+					});
+
+					alert(message);
+					cityNode.value = "Noob!"; // Permet de changer la valeur d'un champ (ce que la personne a écrit)
+				}
+
+				return errorList.length == 0;
+			}
+		</script>
+
+		<form action="" method="get" onsubmit="return valider()">
+			<input type="text" name="cityName" id="city" placeholder="Nom d'une ville">
+			<button type="submit">Rechercher</button>
+		</form>
+	</body>
+</html>

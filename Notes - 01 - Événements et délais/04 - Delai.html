@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<title>Délai d'exécution</title>
+		<meta charset="utf-8"/>
+		<script>
+			const afficher = () => {
+				alert("BOO !");
+				setTimeout(afficher, 2000);
+			}
+			
+			// Dans x msec, exécute le code suivant... (soit le nom d'une fonction, ou une arrow function)
+			let timeoutId = setTimeout(() => {
+				afficher();
+			}, 2000);
+			clearTimeout(timeoutId);
+
+			// À chaque x msec, exécute le code suivant...
+			let intervalId = setInterval(() => {
+				console.log("tick");
+			}, 1000);
+			// clearInterval(intervalId);
+
+			window.addEventListener("load", () => {
+				let node = document.querySelector("div");
+				let posX = 0;
+
+				const tick = () => {
+					posX++;
+					node.style.left = posX + "px";
+					setTimeout(tick, 30);
+				}
+
+				tick();
+			})
+		</script>
+	</head>
+	<body>
+		<div style="background-color:gray;border:1px solid black;position: absolute;top:40px">Bouge-moi</div>
+		<div>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Necessitatibus error nisi fugit eum cumque, quaerat id tenetur omnis possimus aspernatur nihil sed odio culpa nobis qui, in magni quasi corrupti.</div>
+	</body>
+</html>
