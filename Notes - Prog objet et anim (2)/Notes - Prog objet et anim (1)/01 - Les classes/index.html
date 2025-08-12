@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les classes (programmation objet)</title>
+    <script>
+
+        // difference entre JSON et class 
+        // format  : JSON accronyme Java script  notion
+        // variable qui est un objet 
+
+        let  tab = [] ; //facon jason 
+        
+// Methode 1 : JSN 
+        let samuel = {
+            
+            nom : "vbudiov" , 
+            age :33 ,
+            cours : ["Web1", "Prog1"], 
+            // fonction dans un objet 
+            // on n'utilise pas le arrow function ici sauf si tu veux redefinir 
+
+            afficherInfo : function (){
+                console.log(this.nom , this.age , this.cours); 
+            }
+        }
+        // console.log(samuel.age); 
+        // samuel.afficherInfo();
+
+        // let tableau1 = []; 
+        // tablea1.push("Leeroy") ;
+        // tableau2.push("Jenkins"); 
+        // console.log(tableau1[0]);
+
+        // accolade {} 
+        // Dictionnaire meme chose qu'un tableau au lieu de mettre position 0,1,2,3 tu
+        // met un string . string = position (0,1,2,3) 
+
+        let card = {} ;
+        //card["name"] = "Leeroy" ; 
+        // console.log(card["name"]) = "Leeroy"; 
+
+
+
+
+
+
+        // Methode 2 : " class " : ca commence avec une majuscule 
+
+        // definie une classe 
+        class Person {
+            // private = # , juste dans la classe
+            #name ; 
+            //  pas de # = public , accessible partout 
+            age = 33; 
+            
+            // constructeur = tu l'appelles constructor
+            constructor(firstName, lastName){
+                // si tu veux faire reference aux variables de classe faut mettre this
+                this.#name = firstName + " " + lastName ; 
+                this.age = 44; 
+                let variableTmp = 234 ;
+            }
+
+            getInfo() {
+                return this.#name ; 
+            }
+            
+        }
+        let p1 = new Person("Foo", "Bar") ; 
+        let p2 = new Person("Sam", "uel") ; 
+
+        console.log(p1.age) ;
+
+
+    </script>
+</head>
+    <body>
+
+    </body>
+</html>
+
+<!-- revoir les animations  -->
+<!-- revoir la difference entre un arrow function and function et le this -->
+<!-- Format jason -->
+ <!-- revoir position -->
