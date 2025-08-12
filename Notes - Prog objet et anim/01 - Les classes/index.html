@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Les classes (programmation objet)</title>
+    <script>
+        // JSON
+        // console.log(this.nom);
+        let samuel = {
+            nom : "Nasefd",
+            age : 33,
+            cours : ["Web1", "Prog1"],
+            afficherInfo : function () {
+                console.log(this.nom, this.age, this.cours);
+            }
+        }
+        console.log(samuel.age);
+        samuel.afficherInfo();
+
+        let tableau1 = [];
+        tableau1.push("Leeroy");
+        tableau1.push("Jenkins");
+        console.log(tableau1[0]);
+
+        // Dictionnaire
+        let card = {};
+        card["name"] = "Leeroy";
+        console.log(card["name"]);
+
+        // Méthode 2 : "class"
+        class Person {
+            #name;
+            age = 33;
+            static GENRE = {M : "M", F : "F"};
+
+            constructor(firstName, lastName) {
+                this.#name = firstName + " " + lastName;
+                this.age = 44;
+
+                let variableTmp = 234;
+            }
+
+            getInfo() {
+                return this.#name;   
+            }
+        }
+        console.log(Person.GENRE.M)
+        let p1 = new Person("Foo", "Bar");
+        let p2 = new Person("Sam", "uel");
+        console.log(p1.age);
+    </script>
+</head>
+<body>
+
+</body>
+</html>
