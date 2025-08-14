@@ -1,0 +1,14 @@
+{
+  "name": "test-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.mjs",
+  "scripts": {
+    "vers": "node --version"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "give-me-a-joke": "^0.5.1"
+  }
+}
